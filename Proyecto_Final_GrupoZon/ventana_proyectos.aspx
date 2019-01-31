@@ -13,13 +13,13 @@
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                     <div class="col-6">
                         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                     </div>
                     <div class="col-6">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        
 
                     </div>
                     
@@ -28,6 +28,7 @@
             <div class="row">
                 <div class="col-6">
                     <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+                    <p>HOLA MANUEL</p>
                 </div>
            </div>
       </div>

@@ -136,9 +136,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._TextBox1">
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Calendar2">
 <summary>
-Control TextBox1.
+Control Calendar2.
 </summary>
 <remarks>
 Campo generado automáticamente.
