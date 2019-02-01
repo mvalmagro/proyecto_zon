@@ -26,7 +26,7 @@
 }
 
 .elementos_contenedor {
-    background: black;
+    background: #60424c;
     width: 700px;
     height: 700px;
     display: flex;
@@ -36,7 +36,8 @@
 }
 
 .elemento {
-    /*background: orange;*/
+    background: #984a59;
+    border-radius:5px;
     width: 300px;
     height: 50px;
     margin: 10px;
@@ -45,10 +46,6 @@
     align-items: center;
 }
 
-
-.aspCalendario{
-    background:orange;
-}
-.aspCalendario td{
-    background:blue;
+.boton{
+    border-radius:5px;
 }

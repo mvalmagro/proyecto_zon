@@ -145,18 +145,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Label1">
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._LinkButton1">
 <summary>
-Control Label1.
+Control LinkButton1.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Label2">
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Button1">
 <summary>
-Control Label2.
+Control Button1.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -175,6 +175,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Label4">
 <summary>
 Control Label4.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._boton1">
+<summary>
+Control boton1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._htmlcalen">
+<summary>
+Control htmlcalen.
 </summary>
 <remarks>
 Campo generado automáticamente.

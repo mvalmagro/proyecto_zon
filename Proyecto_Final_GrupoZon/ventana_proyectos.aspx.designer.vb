@@ -41,22 +41,22 @@ Partial Public Class ventana_proyectos
     Protected WithEvents Calendar2 As Global.System.Web.UI.WebControls.Calendar
     
     '''<summary>
-    '''Control Label1.
+    '''Control LinkButton1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
     
     '''<summary>
-    '''Control Label2.
+    '''Control Button1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Control Label3.
@@ -75,4 +75,22 @@ Partial Public Class ventana_proyectos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control boton1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents boton1 As Global.System.Web.UI.HtmlControls.HtmlButton
+    
+    '''<summary>
+    '''Control htmlcalen.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents htmlcalen As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
 End Class
