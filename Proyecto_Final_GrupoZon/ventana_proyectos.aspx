@@ -13,33 +13,39 @@
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
-        <div class="top">
-    <div class="padre">
-        <div class="calendarios">
-            <div class="calen">
-                <asp:Calendar ID="Calendar1" runat="server" cssclass="calendario"></asp:Calendar>
-            </div>
-            <div class="calen">
-               <asp:Calendar ID="Calendar2" runat="server" cssclass="calendario"></asp:Calendar>
-            </div>
-        </div>
-        <div class="elementos">
-            <div class="pantallas">
+	    <div class="padre">
 
-            </div>
-            <div class="pantallas">
+		    <div class="calendario_contenedor">
+			    <div class="calendario">
+                    <div class="asp">
+                        <asp:Calendar ID="Calendar1" runat="server" Width="100%" Height="300px"></asp:Calendar>
+                    </div>
+                    
+			    </div>
+			    <div class="calendario">
+				    <div class="asp">
+                        <asp:Calendar ID="Calendar2" runat="server" Width="100%" Height="300px"></asp:Calendar>
+                    </div>
+			    </div>
+		    </div>
 
-            </div>
-            <div class="pantallas">
+		    <div class="elementos_contenedor">
+			    <div class="elemento">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+			    </div>
+			    <div class="elemento">
+				    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+			    </div>
+			    <div class="elemento">
+				    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+			    </div>
+			    <div class="elemento">
+				    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+			    </div>
+		    </div>
 
-            </div>
-            <div class="pantallas">
-
-            </div>
-        </div>
-    </div>
-            </div>
-                </form>
+	    </div>
+      </form>
 
     <script src="Scripts/jquery-3.3.1.min.js"></script>
             <script src="Scripts/bootstrap.min.js"></script>

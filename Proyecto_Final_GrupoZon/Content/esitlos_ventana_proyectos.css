@@ -1,51 +1,46 @@
-﻿* {
-    margin:10px;
-    padding:10px;
+﻿.padre {
+    background: blue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.top{
+
+.calendario_contenedor {
+    background: red;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendario {
+    background: yellow;
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+}
+
+.elementos_contenedor {
+    background: green;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.elemento {
+    background: orange;
+    width: 300px;
+    height: 50px;
+    margin: 10px;
     display:flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
-.padre{
-    background:black;
-    height:700px;
-    width:1500px;
-    display:flex;
-
-
-}
-
-    .calendarios {
-        background: blue;
-        width:200px;
-        flex: auto;
-        display: flex;
-        flex-flow: column wrap;
-        align-items:center;
-        
-    }
-        .calen {
-            background: green;
-            flex: auto;
-            height: 50px;
-        }
-
-            .calendario{
-                height:5px;
-            }
-    
-    .elementos{
-        background:yellow;
-        flex:auto;
-        display:flex;
-        flex-flow:column wrap;
-        justify-content:space-around;
-
-        
-    }
-        .pantallas{
-            background:red;
-
-        }
-
