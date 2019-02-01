@@ -13,31 +13,32 @@
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
-
+        <div class="top">
     <div class="padre">
         <div class="calendarios">
             <div class="calen">
-                <asp:Calendar ID="Calendar1" runat="server" Height="5px" Width="5px"></asp:Calendar>
+                <asp:Calendar ID="Calendar1" runat="server" cssclass="calendario"></asp:Calendar>
             </div>
             <div class="calen">
-               <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+               <asp:Calendar ID="Calendar2" runat="server" cssclass="calendario"></asp:Calendar>
             </div>
         </div>
         <div class="elementos">
             <div class="pantallas">
-                <asp:Label ID="Label1" runat="server" Text="Elemento1"></asp:Label>
+
             </div>
             <div class="pantallas">
-                <asp:Label ID="Label2" runat="server" Text="Elemento2"></asp:Label>
+
             </div>
             <div class="pantallas">
-                <asp:Label ID="Label3" runat="server" Text="Elemento3"></asp:Label>
+
             </div>
             <div class="pantallas">
-                <asp:Label ID="Label4" runat="server" Text="Elemento4"></asp:Label>
+
             </div>
         </div>
     </div>
+            </div>
                 </form>
 
     <script src="Scripts/jquery-3.3.1.min.js"></script>

@@ -2,35 +2,50 @@
     margin:10px;
     padding:10px;
 }
-
+.top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 .padre{
     background:black;
+    height:700px;
+    width:1500px;
     display:flex;
+
 
 }
 
     .calendarios {
         background: blue;
+        width:200px;
         flex: auto;
         display: flex;
         flex-flow: column wrap;
+        align-items:center;
         
     }
-.calen {
-    background: green;
-    flex: auto;
-    height: 400px;
-}
-.calendario{
-    height:100px;
-}
+        .calen {
+            background: green;
+            flex: auto;
+            height: 50px;
+        }
+
+            .calendario{
+                height:5px;
+            }
     
     .elementos{
         background:yellow;
         flex:auto;
+        display:flex;
+        flex-flow:column wrap;
+        justify-content:space-around;
+
         
     }
         .pantallas{
             background:red;
+
         }
 
