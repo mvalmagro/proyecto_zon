@@ -1,26 +1,36 @@
-﻿.encabezado {
-    padding-top: 1rem;
-    background-color: orange;
+﻿* {
+    margin:10px;
+    padding:10px;
 }
 
-.caja_titulo {
-    display: flex;
-    justify-content: flex-start;
+.padre{
+    background:black;
+    display:flex;
+
 }
 
-.titulo {
-    color: black;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 3rem;
+    .calendarios {
+        background: blue;
+        flex: auto;
+        display: flex;
+        flex-flow: column wrap;
+        
+    }
+.calen {
+    background: green;
+    flex: auto;
+    height: 400px;
 }
+.calendario{
+    height:100px;
+}
+    
+    .elementos{
+        background:yellow;
+        flex:auto;
+        
+    }
+        .pantallas{
+            background:red;
+        }
 
-.boton {
-    background-color: orange;
-}
-
-.contenedor {
-    width:100%;
-    height:90px;
-   
-}
