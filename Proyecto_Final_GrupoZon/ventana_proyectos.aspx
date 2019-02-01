@@ -18,7 +18,7 @@
 		    <div class="calendario_contenedor">
 			    <div class="calendario">
                     <div class="asp">
-                        <asp:Calendar ID="Calendar1" runat="server" Width="100%" Height="300px"></asp:Calendar>
+                        <asp:Calendar ID="Calendar1" runat="server" Width="100%" Height="300px" CssClass="aspCalendario"></asp:Calendar>
                     </div>
                     
 			    </div>

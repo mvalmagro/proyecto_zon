@@ -1,5 +1,5 @@
 ﻿.padre {
-    background: blue;
+    /*background: blue;*/
     width: 100%;
     height: 100vh;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .calendario_contenedor {
-    background: red;
+    /*background: black;*/
     width: 700px;
     height: 700px;
     display: flex;
@@ -19,14 +19,14 @@
 }
 
 .calendario {
-    background: yellow;
+    /*background: yellow;*/
     width: 400px;
     height: 300px;
     margin: 10px;
 }
 
 .elementos_contenedor {
-    background: green;
+    background: black;
     width: 700px;
     height: 700px;
     display: flex;
@@ -36,11 +36,19 @@
 }
 
 .elemento {
-    background: orange;
+    /*background: orange;*/
     width: 300px;
     height: 50px;
     margin: 10px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.aspCalendario{
+    background:orange;
+}
+.aspCalendario td{
+    background:blue;
 }
