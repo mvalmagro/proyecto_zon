@@ -27,31 +27,89 @@ Public Class Alta_usuario
         If usuario.Equals("") = True Or password1.Equals("") = True Or password2.Equals("") = True Or nombreyapellidos.Equals("") = True Then
 
             MsgBox("Debe rellenar los campos obligatorios", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-            'Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+            Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
 
         Else
             'Comprobar que el nombre de usuario a dar de alta no existe:
             If ComprobarDuplicidadUsuario(usuario) = True Then
                 MsgBox("El usuario introducido ya existe.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-                'Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
 
             Else
                 'Comprobar que existe coincidencia de contraseña:
                 If password1.Equals(password2) = False Then
                     MsgBox("Las contraseñas introducidas no coinciden.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-                    'Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                    Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+
+                Else
+                    'Comprobar la seguridad de contraseña
+                    If ContrasenaValida(password1) = False Then
+                        MsgBox("La contraseña debe contener mayusculas, minusculas, digitos, caracteres especiales y, como mínimo, una longitud de 8 caracteres.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
+                        Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                    Else
+                        'Ejecutar query para el alta
+                        Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
+                        Dim oConexion As New SqlConnection
+                        Dim myCmd As SqlCommand
+                        Dim query As String
+                        Dim oDataAdapter As SqlDataAdapter
+                        Dim oDataSet As DataSet
+                        Dim oDataRow As DataRow
+                        Dim i As Integer
+                        Dim id_usuario As String
+                        Dim id_privilegio As String
+
+                        oConexion = New SqlConnection(cadenaConexion)
+                        oConexion.Open()
+
+                        query = "INSERT INTO usuarios VALUES('" & usuario & "','" & password1 & "','" & nombreyapellidos & "','" & email & "'," & rol & ",'" & #1900-01-01# & "') SELECT SCOPE_IDENTITY()"
+
+                        myCmd = New SqlCommand(query, oConexion)
+
+                        'Recuperamos el id de usuario, el cual es un autoincremental, generado a partir de la anterior query:
+                        id_usuario = myCmd.ExecuteScalar()
+
+                        myCmd = Nothing
+
+                        'Ahora necesitamos darle permisos al usuario según el perfil especificado:
+
+                        query = "SELECT id_privilegios FROM privilegios_roles WHERE id_rol=" & rol & ";"
+
+                        myCmd = New SqlCommand(query, oConexion)
+
+                        oDataAdapter = New SqlDataAdapter(myCmd)
+
+                        oDataSet = New DataSet
+                        oDataAdapter.Fill(oDataSet, "privilegios_roles")
+
+
+                        i = 0
+                        While i < oDataSet.Tables("privilegios_roles").Rows.Count
+                            oDataRow = oDataSet.Tables("privilegios_roles").Rows(i)
+                            id_privilegio = oDataRow("id_privilegios")
+
+                            query = "INSERT INTO privilegios_usuarios VALUES(" & id_usuario & "," & id_privilegio & ")"
+                            myCmd = New SqlCommand(query, oConexion)
+
+                            myCmd.ExecuteNonQuery()
+
+                            oDataRow = Nothing
+                            i = i + 1
+                        End While
+
+                        oDataSet = Nothing
+
+
+
+                        oConexion.Close()
+
+                    End If
+
 
                 End If
 
-                'Comprobar la seguridad de contraseña
-
-                'Ejecutar query para el alta
 
             End If
-
-
-
-
 
 
         End If
@@ -149,6 +207,41 @@ Public Class Alta_usuario
 
         Return False
 
+
+    End Function
+
+    Private Function ContrasenaValida(l_password As String) As Boolean
+        Dim digitos As Integer
+        Dim minusculas As Integer
+        Dim mayusculas As Integer
+        Dim otroschar As Integer
+        Dim j As Integer
+
+        For j = 0 To l_password.Length - 1
+            'Preguntamos si es un número
+            If IsNumeric(l_password.Substring(j, 1)) Then
+                digitos += 1
+            Else
+                'Preguntamos si es una mayuscula
+                If Asc(l_password.Substring(j, 1)) >= 65 And Asc(l_password.Substring(j, 1)) <= 90 Then
+                    mayusculas += 1
+                Else
+                    'Preguntamos si es una minúscula
+                    If Asc(l_password.Substring(j, 1)) >= 97 And Asc(l_password.Substring(j, 1)) <= 122 Then
+                        minusculas += 1
+                    Else
+                        'Si no se ha cumplido ninguna de las anteriores condiciones, es que es otro dígito.
+                        otroschar += 1
+                    End If
+                End If
+            End If
+        Next
+
+        If l_password.Count >= 8 And digitos >= 1 And minusculas >= 1 And mayusculas >= 1 And otroschar >= 1 Then
+            Return True
+        Else
+            Return False
+        End If
 
     End Function
 
