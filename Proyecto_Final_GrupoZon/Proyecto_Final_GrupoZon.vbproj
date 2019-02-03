@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Alta_usuario.aspx" />
+    <Content Include="Baja_usuario.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -211,6 +212,13 @@
     </Compile>
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Baja_usuario.aspx.designer.vb">
+      <DependentUpon>Baja_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Baja_usuario.aspx.vb">
+      <DependentUpon>Baja_usuario.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Calendario.vb" />
