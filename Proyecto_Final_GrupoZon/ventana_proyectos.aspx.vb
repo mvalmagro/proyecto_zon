@@ -5,16 +5,12 @@ Public Class ventana_proyectos
 
     Private fechas_Calendario1() As Date
     Private titulos_eventos_Calendario1() As String
-    Private mesCal1 As Integer = Now.Month
-
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Calendar1.SelectionMode = CalendarSelectionMode.None
-        CargarTabla(mesCal1)
+
+        CargarTabla()
 
     End Sub
-
-
 
 
 
@@ -22,9 +18,7 @@ Public Class ventana_proyectos
         fechas_Calendario1 = Nothing
         titulos_eventos_Calendario1 = Nothing
 
-        mesCal1 = Calendar1.VisibleDate.Month
-
-        CargarTabla(mesCal1)
+        CargarTabla()
 
     End Sub
 
@@ -63,7 +57,7 @@ Public Class ventana_proyectos
     End Sub
 
 
-    Private Sub CargarTabla(l_mes)
+    Private Sub CargarTabla()
         'Realizamos la conexión a la BBDD:
 
         Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
@@ -77,7 +71,7 @@ Public Class ventana_proyectos
 
         oConexion.Open() '-->abrimos la conexión
 
-        query = "SELECT titulo, fecha_evento FROM proyectos WHERE MONTH(fecha_evento) =" & l_mes & ";"
+        query = "SELECT titulo, fecha_evento FROM proyectos"
 
 
         myCmd = New SqlCommand(query, oConexion)
