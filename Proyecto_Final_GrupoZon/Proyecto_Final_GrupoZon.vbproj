@@ -138,7 +138,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Alta_usuario.aspx" />
-    <Content Include="Baja_usuario.aspx" />
+    <Content Include="Ficha_usuario.aspx" />
+    <Content Include="Listado_usuarios.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -214,11 +215,18 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Baja_usuario.aspx.designer.vb">
-      <DependentUpon>Baja_usuario.aspx</DependentUpon>
+    <Compile Include="Ficha_usuario.aspx.designer.vb">
+      <DependentUpon>Ficha_usuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Baja_usuario.aspx.vb">
-      <DependentUpon>Baja_usuario.aspx</DependentUpon>
+    <Compile Include="Ficha_usuario.aspx.vb">
+      <DependentUpon>Ficha_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Listado_usuarios.aspx.designer.vb">
+      <DependentUpon>Listado_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_usuarios.aspx.vb">
+      <DependentUpon>Listado_usuarios.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Calendario.vb" />

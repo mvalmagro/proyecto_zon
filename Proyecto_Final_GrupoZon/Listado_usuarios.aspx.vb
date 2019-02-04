@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Baja_usuario
+Public Class Listado_usuarios
     Inherits System.Web.UI.Page
 
     Private oDataTable As New DataTable
+
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         CargarDatos()
@@ -18,6 +19,19 @@ Public Class Baja_usuario
         e.Row.Cells(6).Visible = False
     End Sub
 
+    Private Sub grdviewUsuarios_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles grdviewUsuarios.RowEditing
+        Dim idUsuarioEditar As String
+
+        'Capturamos el ID del usuario que queremos editar y del cual vamos a mostrar los datos en su "ficha de usuario":
+        idUsuarioEditar = grdviewUsuarios.Rows(e.NewEditIndex).Cells(1).Text
+
+        'Abrimos la URL correspondiente pasándole un parámetro:
+        Response.Redirect("ficha_usuario.aspx?Valor=" & idUsuarioEditar)
+
+    End Sub
+
+
+
     Private Sub grdviewUsuarios_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles grdviewUsuarios.RowDeleting
         Dim idUsuario As String
         Dim nombreUsuario As String
@@ -31,38 +45,37 @@ Public Class Baja_usuario
 
         If ComprobarUltimoLogonUsuario(fechaLastLogon) = True Then
 
-                If MsgBox("¿Estás seguro que desea eliminar al usuario " & nombreUsuario & "?", MsgBoxStyle.OkCancel, "Eliminación de usuario") = MsgBoxResult.Ok Then
-                    'Se lanza la eliminación del usuario en la tabla de "privilegios_usuarios":
-                    Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
-                    Dim oConexion As New SqlConnection
-                    Dim myCmd As SqlCommand
+            If MsgBox("¿Estás seguro que desea eliminar al usuario " & nombreUsuario & "?", MsgBoxStyle.OkCancel, "Eliminación de usuario") = MsgBoxResult.Ok Then
+                'Se lanza la eliminación del usuario en la tabla de "privilegios_usuarios":
+                Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
+                Dim oConexion As New SqlConnection
+                Dim myCmd As SqlCommand
 
-                    oConexion = New SqlConnection(cadenaConexion)
+                oConexion = New SqlConnection(cadenaConexion)
 
-                    oConexion.Open()
+                oConexion.Open()
 
-                    myCmd = New SqlCommand("DELETE FROM privilegios_usuarios WHERE id_usuario=" & idUsuario, oConexion)
-                    myCmd.ExecuteNonQuery()
-                    myCmd = Nothing
+                myCmd = New SqlCommand("DELETE FROM privilegios_usuarios WHERE id_usuario=" & idUsuario, oConexion)
+                myCmd.ExecuteNonQuery()
+                myCmd = Nothing
 
-                    myCmd = New SqlCommand("DELETE FROM usuarios WHERE id=" & idUsuario, oConexion)
-                    myCmd.ExecuteNonQuery()
-                    myCmd = Nothing
+                myCmd = New SqlCommand("DELETE FROM usuarios WHERE id=" & idUsuario, oConexion)
+                myCmd.ExecuteNonQuery()
+                myCmd = Nothing
 
-                    oConexion.Close()
+                oConexion.Close()
 
-                    Response.Redirect("Baja_usuario.aspx") '-->Recargamos la página
-
-
-                Else
-                    e.Cancel = True
-                End If
+                Response.Redirect("Listado_usuarios.aspx") '-->Recargamos la página
 
             Else
-                MsgBox("No se puede eliminar al usuario " & nombreUsuario & " porque inició sesión hace menos de dos días.", MsgBoxStyle.Exclamation, "Eliminación de usuario")
                 e.Cancel = True
-
             End If
+
+        Else
+            MsgBox("No se puede eliminar al usuario " & nombreUsuario & " porque inició sesión hace menos de dos días.", MsgBoxStyle.Exclamation, "Eliminación de usuario")
+            e.Cancel = True
+
+        End If
 
         'Else
         'MsgBox("No se puede eliminar al usuario " & nombreUsuario & " porque se trata del usuario de la sesión actual.", MsgBoxStyle.Exclamation, "Eliminación de usuario")
@@ -113,8 +126,6 @@ Public Class Baja_usuario
 
     End Sub
 
-
 #End Region
-
 
 End Class

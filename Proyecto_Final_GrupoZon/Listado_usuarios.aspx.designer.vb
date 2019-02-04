@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Baja_usuario
+Partial Public Class Listado_usuarios
     
     '''<summary>
     '''Control form1.
