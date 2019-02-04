@@ -41,15 +41,6 @@ Partial Public Class ventana_proyectos
     Protected WithEvents Calendar2 As Global.System.Web.UI.WebControls.Calendar
     
     '''<summary>
-    '''Control LinkButton1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
-    
-    '''<summary>
     '''Control Button1.
     '''</summary>
     '''<remarks>
@@ -59,38 +50,29 @@ Partial Public Class ventana_proyectos
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control Label3.
+    '''Control Button2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control Label4.
+    '''Control Button3.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents Button3 As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control boton1.
+    '''Control Button4.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents boton1 As Global.System.Web.UI.HtmlControls.HtmlButton
-    
-    '''<summary>
-    '''Control htmlcalen.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents htmlcalen As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
+    Protected WithEvents Button4 As Global.System.Web.UI.WebControls.Button
 End Class

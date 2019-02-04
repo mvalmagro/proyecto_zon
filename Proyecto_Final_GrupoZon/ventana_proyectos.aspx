@@ -13,7 +13,9 @@
 </head>
 <body>
     <form id="form1" runat="server" class="form-container">
+        <img src="img/logo pez fondo claro.png" alt="Alternate Text" class="logo"/>
 	    <div class="padre">
+
 
 		    <div class="calendario_contenedor">
 			    <div class="calendario">
@@ -35,18 +37,16 @@
 
 		    <div class="elementos_contenedor">
 			    <div class="elemento">
-                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Underline="False" ForeColor="Black">Clientes</asp:LinkButton>
-			    </div>
-			    <div class="elemento">
                     <asp:Button ID="Button1" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 			    <div class="elemento">
-				    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                    <asp:Button ID="Button2" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 			    <div class="elemento">
-				    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                    <button id="boton1" runat="server">PRUEBA</button>
-                    <input type="date" name="name" value="" id="htmlcalen" runat="server"/>
+				    <asp:Button ID="Button3" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
+			    </div>
+			    <div class="elemento">
+                    <asp:Button ID="Button4" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 		    </div>
 
