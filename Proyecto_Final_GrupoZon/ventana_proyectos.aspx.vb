@@ -56,6 +56,10 @@ Public Class ventana_proyectos
 
     End Sub
 
+    Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
+        Response.Redirect("Listado_usuarios.aspx")
+    End Sub
+
     Private Sub CargarTabla()
         'Realizamos la conexión a la BBDD:
 
@@ -104,5 +108,7 @@ Public Class ventana_proyectos
         End While
 
     End Sub
+
+
 
 End Class

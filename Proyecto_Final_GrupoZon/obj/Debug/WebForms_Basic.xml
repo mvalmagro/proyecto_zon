@@ -325,6 +325,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:Proyecto_Final_GrupoZon.Listado_usuarios._btnAlta">
+<summary>
+Control btnAlta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Proyecto_Final_GrupoZon.Login._form1">
 <summary>
 Control form1.
@@ -433,9 +442,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Button1">
+<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._btnUsuarios">
 <summary>
-Control Button1.
+Control btnUsuarios.
 </summary>
 <remarks>
 Campo generado automáticamente.

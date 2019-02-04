@@ -84,6 +84,10 @@ Public Class Listado_usuarios
 
     End Sub
 
+    Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
+        Response.Redirect("Alta_usuario.aspx")
+    End Sub
+
 #Region "Funciones"
 
     Private Function ComprobarUltimoLogonUsuario(l_fechaLastLogon As Date) As Boolean
@@ -125,6 +129,8 @@ Public Class Listado_usuarios
         oConexion.Close()
 
     End Sub
+
+
 
 #End Region
 

@@ -39,7 +39,7 @@
 
 		    <div class="elementos_contenedor">
 			    <div class="elemento">
-                    <asp:Button ID="Button1" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
+                    <asp:Button ID="btnUsuarios" runat="server" Text="Gestión de usuarios" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 			    <div class="elemento">
                     <asp:Button ID="Button2" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
