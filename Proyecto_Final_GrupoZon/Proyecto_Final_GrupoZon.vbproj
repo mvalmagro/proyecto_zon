@@ -137,6 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Alta_usuario.aspx" />
+    <Content Include="Ficha_usuario.aspx" />
+    <Content Include="Listado_usuarios.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -161,6 +164,7 @@
     <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Default.aspx" />
+    <Content Include="images\eye.png" />
     <Content Include="PaginaDePrueba.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -195,6 +199,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta_usuario.aspx.designer.vb">
+      <DependentUpon>Alta_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alta_usuario.aspx.vb">
+      <DependentUpon>Alta_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
@@ -204,6 +215,21 @@
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Ficha_usuario.aspx.designer.vb">
+      <DependentUpon>Ficha_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ficha_usuario.aspx.vb">
+      <DependentUpon>Ficha_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Listado_usuarios.aspx.designer.vb">
+      <DependentUpon>Listado_usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Listado_usuarios.aspx.vb">
+      <DependentUpon>Listado_usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Calendario.vb" />
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
