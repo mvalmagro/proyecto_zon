@@ -136,6 +136,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="proyecto.aspx" />
     <Content Include="usuario_alta.aspx" />
     <Content Include="usuario_ficha.aspx" />
     <Content Include="usuario_listado.aspx" />
@@ -196,6 +197,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="proyecto.aspx.designer.vb">
+      <DependentUpon>proyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="proyecto.aspx.vb">
+      <DependentUpon>proyecto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="usuario_alta.aspx.designer.vb">
       <DependentUpon>usuario_alta.aspx</DependentUpon>
     </Compile>
