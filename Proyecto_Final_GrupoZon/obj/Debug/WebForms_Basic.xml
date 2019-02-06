@@ -37,6 +37,15 @@ Proyecto_Final_GrupoZon
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="F:Proyecto_Final_GrupoZon.proyecto._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Proyecto_Final_GrupoZon.usuario_alta._form1">
 <summary>
 Control form1.
@@ -424,9 +433,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.calendario._Button2">
+<member name="F:Proyecto_Final_GrupoZon.calendario._btnProyecto">
 <summary>
-Control Button2.
+Control btnProyecto.
 </summary>
 <remarks>
 Campo generado automáticamente.

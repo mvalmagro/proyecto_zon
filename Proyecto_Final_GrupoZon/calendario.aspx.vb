@@ -60,6 +60,10 @@ Public Class calendario
         Response.Redirect("usuario_listado.aspx")
     End Sub
 
+    Private Sub btnProyecto_Click(sender As Object, e As EventArgs) Handles btnProyecto.Click
+        Response.Write("<script>window.open('proyecto.aspx','popup','width=550,height=600') </script>")
+    End Sub
+
     Private Sub CargarTabla()
         'Realizamos la conexión a la BBDD:
 
@@ -108,7 +112,6 @@ Public Class calendario
         End While
 
     End Sub
-
 
 
 End Class
