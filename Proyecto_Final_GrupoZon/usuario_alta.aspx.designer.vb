@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Ficha_usuario
+Partial Public Class usuario_alta
     
     '''<summary>
     '''Control form1.
@@ -68,31 +68,13 @@ Partial Public Class Ficha_usuario
     Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control txtConfirmarPassword.
+    '''Control txtPasswordConfirm.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtConfirmarPassword As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control Label5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control txtNombreyApellidos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtNombreyApellidos As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPasswordConfirm As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Label4.
@@ -104,6 +86,24 @@ Partial Public Class Ficha_usuario
     Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control txtNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control Label5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Control txtEmail.
     '''</summary>
     '''<remarks>
@@ -113,56 +113,20 @@ Partial Public Class Ficha_usuario
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control Label6.
+    '''Control dropDownRol.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label6 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents dropDownRol As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control dropdownRol.
+    '''Control bttAlta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dropdownRol As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''Control Label7.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label7 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control lstPrivilegiosActuales.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lstPrivilegiosActuales As Global.System.Web.UI.WebControls.ListBox
-    
-    '''<summary>
-    '''Control lstPrivilegiosRestantes.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lstPrivilegiosRestantes As Global.System.Web.UI.WebControls.ListBox
-    
-    '''<summary>
-    '''Control Button1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents bttAlta As Global.System.Web.UI.WebControls.Button
 End Class

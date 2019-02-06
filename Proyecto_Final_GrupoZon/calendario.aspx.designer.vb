@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ventana_proyectos
+Partial Public Class calendario
     
     '''<summary>
     '''Control form1.

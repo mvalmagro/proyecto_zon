@@ -37,7 +37,7 @@ Proyecto_Final_GrupoZon
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._form1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._form1">
 <summary>
 Control form1.
 </summary>
@@ -46,7 +46,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._Label1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label1">
 <summary>
 Control Label1.
 </summary>
@@ -55,7 +55,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._txtUsuario">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._txtUsuario">
 <summary>
 Control txtUsuario.
 </summary>
@@ -64,7 +64,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._Label2">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label2">
 <summary>
 Control Label2.
 </summary>
@@ -73,7 +73,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._txtPassword">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._txtPassword">
 <summary>
 Control txtPassword.
 </summary>
@@ -82,7 +82,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._Label3">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label3">
 <summary>
 Control Label3.
 </summary>
@@ -91,7 +91,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._txtPasswordConfirm">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._txtPasswordConfirm">
 <summary>
 Control txtPasswordConfirm.
 </summary>
@@ -100,7 +100,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._Label4">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label4">
 <summary>
 Control Label4.
 </summary>
@@ -109,7 +109,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._txtNombre">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._txtNombre">
 <summary>
 Control txtNombre.
 </summary>
@@ -118,7 +118,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._Label5">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label5">
 <summary>
 Control Label5.
 </summary>
@@ -127,7 +127,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._txtEmail">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._txtEmail">
 <summary>
 Control txtEmail.
 </summary>
@@ -136,7 +136,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._dropDownRol">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._dropDownRol">
 <summary>
 Control dropDownRol.
 </summary>
@@ -145,7 +145,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Alta_usuario._bttAlta">
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._bttAlta">
 <summary>
 Control bttAlta.
 </summary>
@@ -154,7 +154,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._form1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._form1">
 <summary>
 Control form1.
 </summary>
@@ -163,7 +163,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label1">
 <summary>
 Control Label1.
 </summary>
@@ -172,7 +172,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._txtUsuario">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._txtUsuario">
 <summary>
 Control txtUsuario.
 </summary>
@@ -181,7 +181,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label2">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label2">
 <summary>
 Control Label2.
 </summary>
@@ -190,7 +190,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._txtPassword">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._txtPassword">
 <summary>
 Control txtPassword.
 </summary>
@@ -199,7 +199,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label3">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label3">
 <summary>
 Control Label3.
 </summary>
@@ -208,7 +208,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._txtConfirmarPassword">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._txtConfirmarPassword">
 <summary>
 Control txtConfirmarPassword.
 </summary>
@@ -217,7 +217,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label5">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label5">
 <summary>
 Control Label5.
 </summary>
@@ -226,7 +226,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._txtNombreyApellidos">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._txtNombreyApellidos">
 <summary>
 Control txtNombreyApellidos.
 </summary>
@@ -235,7 +235,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label4">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label4">
 <summary>
 Control Label4.
 </summary>
@@ -244,7 +244,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._txtEmail">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._txtEmail">
 <summary>
 Control txtEmail.
 </summary>
@@ -253,7 +253,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label6">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label6">
 <summary>
 Control Label6.
 </summary>
@@ -262,7 +262,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._dropdownRol">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._dropdownRol">
 <summary>
 Control dropdownRol.
 </summary>
@@ -271,7 +271,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Label7">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Label7">
 <summary>
 Control Label7.
 </summary>
@@ -280,7 +280,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._lstPrivilegiosActuales">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._lstPrivilegiosActuales">
 <summary>
 Control lstPrivilegiosActuales.
 </summary>
@@ -289,7 +289,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._lstPrivilegiosRestantes">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._lstPrivilegiosRestantes">
 <summary>
 Control lstPrivilegiosRestantes.
 </summary>
@@ -298,7 +298,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Ficha_usuario._Button1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Button1">
 <summary>
 Control Button1.
 </summary>
@@ -307,7 +307,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Listado_usuarios._form1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_listado._form1">
 <summary>
 Control form1.
 </summary>
@@ -316,7 +316,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Listado_usuarios._grdviewUsuarios">
+<member name="F:Proyecto_Final_GrupoZon.usuario_listado._grdviewUsuarios">
 <summary>
 Control grdviewUsuarios.
 </summary>
@@ -325,7 +325,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.Listado_usuarios._btnAlta">
+<member name="F:Proyecto_Final_GrupoZon.usuario_listado._btnAlta">
 <summary>
 Control btnAlta.
 </summary>
@@ -379,33 +379,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.PaginaDePrueba._form1">
-<summary>
-Control form1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:Proyecto_Final_GrupoZon.PaginaDePrueba._lblUsuario">
-<summary>
-Control lblUsuario.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:Proyecto_Final_GrupoZon.PaginaDePrueba._lblPassword">
-<summary>
-Control lblPassword.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:Proyecto_Final_GrupoZon.SiteMaster._MainContent">
 <summary>
 Control MainContent.
@@ -415,7 +388,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._form1">
+<member name="F:Proyecto_Final_GrupoZon.calendario._form1">
 <summary>
 Control form1.
 </summary>
@@ -424,7 +397,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Calendar1">
+<member name="F:Proyecto_Final_GrupoZon.calendario._Calendar1">
 <summary>
 Control Calendar1.
 </summary>
@@ -433,7 +406,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Calendar2">
+<member name="F:Proyecto_Final_GrupoZon.calendario._Calendar2">
 <summary>
 Control Calendar2.
 </summary>
@@ -442,7 +415,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._btnUsuarios">
+<member name="F:Proyecto_Final_GrupoZon.calendario._btnUsuarios">
 <summary>
 Control btnUsuarios.
 </summary>
@@ -451,7 +424,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Button2">
+<member name="F:Proyecto_Final_GrupoZon.calendario._Button2">
 <summary>
 Control Button2.
 </summary>
@@ -460,7 +433,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Button3">
+<member name="F:Proyecto_Final_GrupoZon.calendario._Button3">
 <summary>
 Control Button3.
 </summary>
@@ -469,7 +442,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.ventana_proyectos._Button4">
+<member name="F:Proyecto_Final_GrupoZon.calendario._Button4">
 <summary>
 Control Button4.
 </summary>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Alta_usuario.aspx.vb" Inherits="Proyecto_Final_GrupoZon.Alta_usuario" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="usuario_alta.aspx.vb" Inherits="Proyecto_Final_GrupoZon.usuario_alta" %>
 
 <!DOCTYPE html>
 

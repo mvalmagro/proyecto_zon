@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class ventana_proyectos
+Public Class calendario
     Inherits System.Web.UI.Page
 
     Private fechas_Calendario1() As Date
@@ -57,7 +57,7 @@ Public Class ventana_proyectos
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-        Response.Redirect("Listado_usuarios.aspx")
+        Response.Redirect("usuario_listado.aspx")
     End Sub
 
     Private Sub CargarTabla()

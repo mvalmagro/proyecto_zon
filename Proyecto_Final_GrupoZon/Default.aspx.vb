@@ -47,7 +47,7 @@ Public Class Login
                 If correcto = True Then
                     Session("usuario") = usuario
                     Session("password") = password
-                    Response.Redirect("ventana_proyectos.aspx")
+                    Response.Redirect("calendario.aspx")
 
                 Else
                     lblErrorLogin.Text = "Usuario/contraseña incorrectos."

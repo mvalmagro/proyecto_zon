@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Listado_usuarios
+Public Class usuario_listado
     Inherits System.Web.UI.Page
 
     Private oDataTable As New DataTable
@@ -65,7 +65,7 @@ Public Class Listado_usuarios
 
                 oConexion.Close()
 
-                Response.Redirect("Listado_usuarios.aspx") '-->Recargamos la página
+                Response.Redirect("usuario_listado.aspx") '-->Recargamos la página
 
             Else
                 e.Cancel = True
@@ -85,7 +85,7 @@ Public Class Listado_usuarios
     End Sub
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
-        Response.Redirect("Alta_usuario.aspx")
+        Response.Redirect("usuario_alta.aspx")
     End Sub
 
 #Region "Funciones"

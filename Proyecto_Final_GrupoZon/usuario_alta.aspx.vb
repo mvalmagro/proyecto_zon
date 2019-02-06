@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Alta_usuario
+Public Class usuario_alta
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -27,25 +27,25 @@ Public Class Alta_usuario
         If usuario.Equals("") = True Or password1.Equals("") = True Or password2.Equals("") = True Or nombreyapellidos.Equals("") = True Then
 
             MsgBox("Debe rellenar los campos obligatorios", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-            Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+            Response.Redirect("usuario_alta.aspx") '-->Recargamos la página
 
         Else
             'Comprobar que el nombre de usuario a dar de alta no existe:
             If ComprobarDuplicidadUsuario(usuario) = True Then
                 MsgBox("El usuario introducido ya existe.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-                Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                Response.Redirect("usuario_alta.aspx") '-->Recargamos la página
 
             Else
                 'Comprobar que existe coincidencia de contraseña:
                 If password1.Equals(password2) = False Then
                     MsgBox("Las contraseñas introducidas no coinciden.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-                    Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                    Response.Redirect("usuario_alta.aspx") '-->Recargamos la página
 
                 Else
                     'Comprobar la seguridad de contraseña
                     If ContrasenaValida(password1) = False Then
                         MsgBox("La contraseña debe contener mayusculas, minusculas, digitos, caracteres especiales y, como mínimo, una longitud de 8 caracteres.", MsgBoxStyle.Exclamation, "Proceso de alta de usuario fallido.")
-                        Response.Redirect("Alta_usuario.aspx") '-->Recargamos la página
+                        Response.Redirect("usuario_alta.aspx") '-->Recargamos la página
                     Else
                         'Ejecutar query para el alta
                         Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"

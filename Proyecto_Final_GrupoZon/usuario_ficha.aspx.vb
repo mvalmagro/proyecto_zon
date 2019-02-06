@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Ficha_usuario
+Public Class usuario_ficha
     Inherits System.Web.UI.Page
 
     Private idusuario As String
