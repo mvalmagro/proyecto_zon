@@ -21,23 +21,27 @@
                 </div>
 
                 <div class="elementos form-group">
-                    <label for="">Titulo</label>
-                    <input type="text" name="" value="" class="form-control">
+                  <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                  <asp:TextBox ID="txtTitulo" runat="server" class="form-control"></asp:TextBox>
                 </div>
 
                <div class="elementos form-group">
-                  <label for="">Titulo</label>
-                  <input type="text" name="" value="" class="form-control">
+                  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                  <asp:TextBox ID="txtComercial" runat="server" class="form-control"></asp:TextBox>
                </div>
 
                <div class="elementos form-group">
-                <label for="">Titulo</label>
-                <input type="text" name="" value="" class="form-control">
+                  <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                  <asp:TextBox ID="txtFecha_pedido" runat="server" class="form-control"></asp:TextBox>
                </div>
 
               <div class="elementos form-group">
-                <label for="">Titulo</label>
-                <input type="text" name="" value="" class="form-control">
+                  <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                  <asp:TextBox ID="txtFecha_evento" runat="server" class="form-control"></asp:TextBox>
+              </div>
+
+              <div class="elementos">
+                  <asp:Button ID="btnEnviar" runat="server" Text="Button" />
               </div>
 
             </div>
