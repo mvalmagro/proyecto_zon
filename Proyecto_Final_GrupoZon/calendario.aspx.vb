@@ -113,5 +113,8 @@ Public Class calendario
 
     End Sub
 
+    Protected Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
+        Response.Redirect("clientes_listado.aspx")
+    End Sub
 
 End Class

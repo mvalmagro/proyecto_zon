@@ -45,7 +45,7 @@
                     <asp:Button ID="btnProyecto" runat="server" Text="Gestion de proyectos" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 			    <div class="elemento">
-				    <asp:Button ID="Button3" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
+				    <asp:Button ID="btnClientes" runat="server" Text="Gestión de clientes" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />
 			    </div>
 			    <div class="elemento">
                     <asp:Button ID="Button4" runat="server" Text="Button" Width="100%" Height="100%" BackColor="#984A59" BorderColor="#984A59" BorderStyle="None" CssClass="boton" />

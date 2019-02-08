@@ -59,13 +59,13 @@ Partial Public Class calendario
     Protected WithEvents btnProyecto As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control Button3.
+    '''Control btnClientes.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button3 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnClientes As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Control Button4.
