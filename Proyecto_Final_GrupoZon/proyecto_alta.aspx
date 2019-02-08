@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="proyecto.aspx.vb" Inherits="Proyecto_Final_GrupoZon.proyecto" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="proyecto_alta.aspx.vb" Inherits="Proyecto_Final_GrupoZon.proyecto_alta" %>
 
 <!DOCTYPE html>
 
@@ -32,12 +32,17 @@
 
                <div class="elementos form-group">
                   <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-                  <asp:TextBox ID="txtFecha_pedido" runat="server" class="form-control"></asp:TextBox>
+                  <asp:TextBox ID="txtFecha_pedido" runat="server" type="date" class="form-control"></asp:TextBox>
                </div>
 
               <div class="elementos form-group">
                   <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-                  <asp:TextBox ID="txtFecha_evento" runat="server" class="form-control"></asp:TextBox>
+                  <asp:TextBox ID="txtFecha_evento" runat="server" type="datetime-local" class="form-control"></asp:TextBox>
+              </div>
+
+              <div class="elementos form-group">
+                  <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                  <asp:DropDownList ID="lstLista" runat="server"></asp:DropDownList>
               </div>
 
               <div class="elementos">

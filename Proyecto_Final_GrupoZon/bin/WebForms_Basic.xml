@@ -37,7 +37,7 @@ Proyecto_Final_GrupoZon
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._form1">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._form1">
 <summary>
 Control form1.
 </summary>
@@ -46,7 +46,7 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._Label2">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._Label2">
 <summary>
 Control Label2.
 </summary>
@@ -55,16 +55,16 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._TextBox2">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._txtTitulo">
 <summary>
-Control TextBox2.
+Control txtTitulo.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._Label1">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._Label1">
 <summary>
 Control Label1.
 </summary>
@@ -73,16 +73,16 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._TextBox1">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._txtComercial">
 <summary>
-Control TextBox1.
+Control txtComercial.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._Label3">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._Label3">
 <summary>
 Control Label3.
 </summary>
@@ -91,16 +91,16 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._TextBox3">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._txtFecha_pedido">
 <summary>
-Control TextBox3.
+Control txtFecha_pedido.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._Label4">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._Label4">
 <summary>
 Control Label4.
 </summary>
@@ -109,18 +109,36 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._TextBox4">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._txtFecha_evento">
 <summary>
-Control TextBox4.
+Control txtFecha_evento.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.proyecto._Button1">
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._Label5">
 <summary>
-Control Button1.
+Control Label5.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._lstLista">
+<summary>
+Control lstLista.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.proyecto_alta._btnEnviar">
+<summary>
+Control btnEnviar.
 </summary>
 <remarks>
 Campo generado automáticamente.
