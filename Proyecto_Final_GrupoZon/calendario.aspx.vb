@@ -61,7 +61,8 @@ Public Class calendario
     End Sub
 
     Private Sub btnProyecto_Click(sender As Object, e As EventArgs) Handles btnProyecto.Click
-        Response.Write("<script>window.open('proyecto_alta.aspx','popup','width=550,height=600') </script>")
+        Response.Redirect("proyecto_listado")
+        'Response.Write("<script>window.open('proyecto_alta.aspx','popup','width=550,height=600') </script>")
     End Sub
 
     Private Sub CargarTabla()

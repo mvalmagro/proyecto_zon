@@ -140,6 +140,7 @@
     <Content Include="img\logo pez fondo claro.png" />
     <Content Include="img\logo pez fondo oscuro.png" />
     <Content Include="proyecto_alta.aspx" />
+    <Content Include="proyecto_listado.aspx" />
     <Content Include="usuario_alta.aspx" />
     <Content Include="usuario_ficha.aspx" />
     <Content Include="usuario_listado.aspx" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="proyecto_alta.aspx.vb">
       <DependentUpon>proyecto_alta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="proyecto_listado.aspx.designer.vb">
+      <DependentUpon>proyecto_listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="proyecto_listado.aspx.vb">
+      <DependentUpon>proyecto_listado.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="usuario_alta.aspx.designer.vb">
