@@ -23,13 +23,13 @@ Partial Public Class cliente_ficha
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
-    '''Control txtCliente.
+    '''Control lblTitulo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtCliente As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents lblTitulo As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control imgLogo.

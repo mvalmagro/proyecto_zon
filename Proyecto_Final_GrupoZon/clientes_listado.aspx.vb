@@ -113,8 +113,13 @@ Public Class clientes_listado
         Dim path As String
         While i < grdviewClientes.Rows.Count
             path = grdviewClientes.Rows.Item(i).Cells.Item(9).Text
-            grdviewClientes.Rows.Item(i).Cells.Item(2).Text = "<img src=" & path & " border=""1"" width=""40"" height=""40"">" & grdviewClientes.Rows.Item(i).Cells.Item(2).Text
+
+            ' "&nbsp;"-->significa que la celda en la que se pinta la ruta(path) del logo, está vacia.
+            If path.Equals("&nbsp;") <> True Then
+                grdviewClientes.Rows.Item(i).Cells.Item(2).Text = "<img src=" & path & " border=""1"" width=""40"" height=""40"">" & grdviewClientes.Rows.Item(i).Cells.Item(2).Text
+            End If
             i = i + 1
+
         End While
 
     End Sub

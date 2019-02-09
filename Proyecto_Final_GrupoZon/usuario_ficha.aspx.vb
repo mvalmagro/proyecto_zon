@@ -14,36 +14,94 @@ Public Class usuario_ficha
     Private nombre_rol As String
     Private nombre_privilegios() As String
 
-
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub usuario_ficha_Init(sender As Object, e As EventArgs) Handles Me.Init
         idusuario = Request.QueryString("Valor")
         CargarDatos()
-
-        '===DEBUG=======================================
-        'MsgBox("id usuario:" & idusuario)
-        'MsgBox("usuario:" & usuario)
-        'MsgBox("password_actual:" & password_actual)
-        'MsgBox("nombre:" & nombre)
-        'MsgBox("email:" & email)
-        'MsgBox("id_rol:" & id_rol)
-        'MsgBox("ultimoLogon" & ultimoLogon)
-        'MsgBox("nombre_rol:" & nombre_rol)
-
-        'Dim i As Integer = 0
-
-        'While i < id_privilegios.Length
-        '    MsgBox("Privilegios:" & id_privilegios(i) & " - " & nombre_privilegios(i))
-
-        '    i = i + 1
-        'End While
-        ' ===fin=======================================
 
         PintarDatos()
 
         lstPrivilegiosActuales.ForeColor = Drawing.Color.Green
         lstPrivilegiosRestantes.ForeColor = Drawing.Color.Red
 
+
     End Sub
+
+    Private Sub usuario_ficha_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        If dropdownRol.SelectedItem.Text <> "Personalizado" Then
+            btnArrowCompletoDerecha.Enabled = False
+            btnArrowCompletoIzquierda.Enabled = False
+            btnArrowDerecha.Enabled = False
+            btnArrowIzquierda.Enabled = False
+        End If
+
+
+
+    End Sub
+
+
+    Private Sub btnArrowCompletoDerecha_Click(sender As Object, e As EventArgs) Handles btnArrowCompletoDerecha.Click
+        Dim i As Integer
+        Dim oListItemCollection As ListItemCollection
+
+        oListItemCollection = lstPrivilegiosActuales.Items
+
+        i = 0
+        While i < lstPrivilegiosActuales.Items.Count
+
+            lstPrivilegiosRestantes.Items.Add(oListItemCollection.Item(i))
+            i = i + 1
+        End While
+        lstPrivilegiosActuales.Items.Clear()
+
+    End Sub
+
+
+    Private Sub btnArrowCompletoIzquierda_Click(sender As Object, e As EventArgs) Handles btnArrowCompletoIzquierda.Click
+        Dim i As Integer
+        Dim oListItemCollection As ListItemCollection
+
+        oListItemCollection = lstPrivilegiosRestantes.Items
+
+        i = 0
+        While i < lstPrivilegiosRestantes.Items.Count
+
+            lstPrivilegiosActuales.Items.Add(oListItemCollection.Item(i))
+            i = i + 1
+        End While
+        lstPrivilegiosRestantes.Items.Clear()
+    End Sub
+
+
+
+    Private Sub btnArrowDerecha_Click(sender As Object, e As EventArgs) Handles btnArrowDerecha.Click
+        Dim ElementosEliminar As ArrayList = New ArrayList
+
+        For Each item As ListItem In lstPrivilegiosActuales.Items
+            If item.Selected Then
+                lstPrivilegiosRestantes.Items.Add(New ListItem(item.Text, item.Value))
+                ElementosEliminar.Add(item)
+            End If
+        Next
+        RemoveElements(lstPrivilegiosActuales, ElementosEliminar)
+
+    End Sub
+
+
+    Private Sub btnArrowIzquierda_Click(sender As Object, e As EventArgs) Handles btnArrowIzquierda.Click
+        Dim ElementosEliminar As ArrayList = New ArrayList
+
+        For Each item As ListItem In lstPrivilegiosRestantes.Items
+            If item.Selected Then
+                lstPrivilegiosActuales.Items.Add(New ListItem(item.Text, item.Value))
+                ElementosEliminar.Add(item)
+            End If
+        Next
+        RemoveElements(lstPrivilegiosRestantes, ElementosEliminar)
+    End Sub
+
+
+
 
 #Region "Funciones principales"
 
@@ -140,6 +198,15 @@ Public Class usuario_ficha
 
     End Sub
 
+
+    Private Sub RemoveElements(ByRef ListBox As ListBox, ByVal Elements As ArrayList)
+
+        For Each item As ListItem In Elements
+            ListBox.Items.Remove(item)
+        Next
+
+    End Sub
+
 #End Region
 
 #Region "Sub Funciones"
@@ -230,6 +297,9 @@ Public Class usuario_ficha
         oDataSet = Nothing
 
     End Sub
+
+
+
 
 #End Region
 

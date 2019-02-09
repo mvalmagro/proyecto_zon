@@ -73,9 +73,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.cliente_alta._txtCliente">
+<member name="F:Proyecto_Final_GrupoZon.cliente_alta._lblTitulo">
 <summary>
-Control txtCliente.
+Control lblTitulo.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -253,9 +253,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.cliente_ficha._txtCliente">
+<member name="F:Proyecto_Final_GrupoZon.cliente_ficha._lblTitulo">
 <summary>
-Control txtCliente.
+Control lblTitulo.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -451,6 +451,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._lblTitulo">
+<summary>
+Control lblTitulo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label1">
 <summary>
 Control Label1.
@@ -541,6 +550,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_alta._Label6">
+<summary>
+Control Label6.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Proyecto_Final_GrupoZon.usuario_alta._dropDownRol">
 <summary>
 Control dropDownRol.
@@ -562,6 +580,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:Proyecto_Final_GrupoZon.usuario_ficha._form1">
 <summary>
 Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._lblTitulo">
+<summary>
+Control lblTitulo.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -694,6 +721,42 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._btnArrowDerecha">
+<summary>
+Control btnArrowDerecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._btnArrowIzquierda">
+<summary>
+Control btnArrowIzquierda.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._btnArrowCompletoDerecha">
+<summary>
+Control btnArrowCompletoDerecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._btnArrowCompletoIzquierda">
+<summary>
+Control btnArrowCompletoIzquierda.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Proyecto_Final_GrupoZon.usuario_ficha._lstPrivilegiosRestantes">
 <summary>
 Control lstPrivilegiosRestantes.
@@ -703,9 +766,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._Button1">
+<member name="F:Proyecto_Final_GrupoZon.usuario_ficha._btnModificar">
 <summary>
-Control Button1.
+Control btnModificar.
 </summary>
 <remarks>
 Campo generado automáticamente.

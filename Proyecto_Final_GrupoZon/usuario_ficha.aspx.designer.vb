@@ -23,6 +23,15 @@ Partial Public Class usuario_ficha
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
     
     '''<summary>
+    '''Control lblTitulo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblTitulo As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''Control Label1.
     '''</summary>
     '''<remarks>
@@ -149,6 +158,42 @@ Partial Public Class usuario_ficha
     Protected WithEvents lstPrivilegiosActuales As Global.System.Web.UI.WebControls.ListBox
     
     '''<summary>
+    '''Control btnArrowDerecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnArrowDerecha As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control btnArrowIzquierda.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnArrowIzquierda As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control btnArrowCompletoDerecha.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnArrowCompletoDerecha As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control btnArrowCompletoIzquierda.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnArrowCompletoIzquierda As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''Control lstPrivilegiosRestantes.
     '''</summary>
     '''<remarks>
@@ -158,11 +203,11 @@ Partial Public Class usuario_ficha
     Protected WithEvents lstPrivilegiosRestantes As Global.System.Web.UI.WebControls.ListBox
     
     '''<summary>
-    '''Control Button1.
+    '''Control btnModificar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
 End Class

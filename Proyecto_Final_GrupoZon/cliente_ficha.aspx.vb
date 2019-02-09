@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Reflection
 
 Public Class cliente_ficha
     Inherits System.Web.UI.Page
@@ -13,6 +15,7 @@ Public Class cliente_ficha
     Private sector As String
 
     Private path_logo As String
+    Private path_logo_anterior As New String("")
 
     Private Sub cliente_ficha_Init(sender As Object, e As EventArgs) Handles Me.Init
         'Guardamos el idCliente, el cual se nos ha pasado por parámetro a esta Page desde la Page anterior:
@@ -29,9 +32,22 @@ Public Class cliente_ficha
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
         If CargarImagen() = True Then '-->Tenemos que controlar con este IF que no nos hayan adjuntado archivos que no sean imágenes.
+
+            If path_logo_anterior.Equals("") <> True Then
+                Dim oDirectoryInfo As New DirectoryInfo(path_logo_anterior)
+
+                'Debemos borrar la imagen anterior para no dejar archivos residuales en el server:
+                If System.IO.File.Exists(oDirectoryInfo.FullName) = True Then
+                    System.IO.File.Delete(oDirectoryInfo.FullName)
+                End If
+
+            End If
+
             ActualizarAtributos()
             LanzarUpdate()
             Response.Redirect("clientes_listado.aspx")
+        Else
+
         End If
 
     End Sub
@@ -114,6 +130,7 @@ Public Class cliente_ficha
 
         'Obtenemos el path de la carpeta, alojada en el servidor, donde queremos guardar los ficheros a cargar:
         Dim dirPath As String = System.Web.HttpContext.Current.Server.MapPath("~") & "/images/"
+        Dim nombreAleatorio As String
 
         If fileupLogoCli.HasFiles = True Then '-->Necesitamos comprobar si hay algún fichero cargado.
 
@@ -125,12 +142,19 @@ Public Class cliente_ficha
                 'Nos guardamos en esta variable el fichero j de la colección:
                 Dim fichero As HttpPostedFile = ficheros(j)
 
-                If CheckExtension(fileupLogoCli.FileName) = True Then
+                If CheckExtension(fileupLogoCli.FileName) = True Then '-->Con este if comprobamos que el fichero sea '.jpg, .jpeg, .gif, .png
+
+                    nombreAleatorio = DateTime.Now.ToString("yyyyMMddHHmmssfffffff")
+
+                    'Nos guardamos la ruta de la imagen antigua para luego borrarla del servidor y no dejar archivos residuales:
+                    path_logo_anterior = path_logo
+
                     'Nos apuntamos el path para luego cargarlo en la BBDD:
-                    path_logo = "images/cliente_" & idCliente & "." & GetExtension(fileupLogoCli.FileName)
+                    path_logo = "images/cliente_" & nombreAleatorio & "." & GetExtension(fileupLogoCli.FileName)
 
                     'Subimos el fichero al servidor:
-                    fichero.SaveAs(dirPath & "cliente_" & idCliente & "." & GetExtension(fileupLogoCli.FileName))
+                    fichero.SaveAs(dirPath & "cliente_" & nombreAleatorio & "." & GetExtension(fileupLogoCli.FileName))
+                    'fichero.SaveAs(dirPath & "cliente_" & DateTime.Now.ToString("yyyyMMddHHmmssfffffff") & "." & GetExtension(fileupLogoCli.FileName))
                 Else
                     MsgBox("Solo puede cargar ficheros con extensiones .jpg .jpeg .gif o .png")
                     Return False
@@ -157,7 +181,6 @@ Public Class cliente_ficha
     Private Function CheckExtension(pathCompleto As String) As Boolean
         Dim cadena() As String
         Dim extension As String
-        '.jpg, .jpeg, .gif, .png
 
         cadena = pathCompleto.Split(".")
 

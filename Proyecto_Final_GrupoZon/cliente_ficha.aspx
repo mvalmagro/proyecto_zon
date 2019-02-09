@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="elementos form-group">
-                    <asp:Label ID="txtCliente" runat="server" Text="Label" Font-Size="XX-Large">Ficha de cliente</asp:Label>
+                    <asp:Label ID="lblTitulo" runat="server" Text="Label" Font-Size="XX-Large">Ficha de cliente</asp:Label>
                 </div>
 
                 <div class="elementos form-group">
