@@ -25,38 +25,55 @@
                 </div>
 
                 <div class="elementos form-group">
+                    <asp:Image ID="imgLogo" runat="server" width="50" Height="50" />
+                </div>
+
+                <div class="elementos form-group">
                     <asp:Label ID="Label1" runat="server" Text="Label">Nombre comercial:</asp:Label>
-                    <asp:TextBox ID="txtNombreComercial" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreComercial" runat="server" class="form-control" MaxLength="100"></asp:TextBox>
                 </div>
 
                <div class="elementos form-group">
                     <asp:Label ID="Label2" runat="server" Text="Label">Nombre fiscal:</asp:Label>
-                    <asp:TextBox ID="txtNombreFiscal" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreFiscal" runat="server" class="form-control" MaxLength="100"></asp:TextBox>
                </div>
 
                <div class="elementos form-group">
                     <asp:Label ID="Label3" runat="server" Text="Label">CIF:</asp:Label>
-                    <asp:TextBox ID="txtCif" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCif" runat="server" class="form-control" MaxLength="9"></asp:TextBox>
                </div>
 
               <div class="elementos form-group">
                     <asp:Label ID="Label4" runat="server" Text="Label">Persona de contacto:</asp:Label>
-                    <asp:TextBox ID="txtPersonaContacto" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtPersonaContacto" runat="server" class="form-control" MaxLength="60"></asp:TextBox>
               </div>
 
               <div class="elementos form-group">
                     <asp:Label ID="Label5" runat="server" Text="Label">Email:</asp:Label>
-                    <asp:TextBox ID="txtEmail" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" class="form-control" MaxLength="60" TextMode="Email"></asp:TextBox>
               </div>
 
               <div class="elementos form-group">
                     <asp:Label ID="Label6" runat="server" Text="Label">Teléfono:</asp:Label>
-                    <asp:TextBox ID="txtTelefono" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" runat="server" class="form-control" MaxLength="20" TextMode="Phone"></asp:TextBox>
               </div>
 
               <div class="elementos form-group">
                     <asp:Label ID="Label7" runat="server" Text="Label">Sector:</asp:Label>
-                    <asp:TextBox ID="txtSector" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSector" runat="server" class="form-control" MaxLength="60"></asp:TextBox>
+              </div>
+
+               <div class="elementos form-group">
+                    <asp:Label ID="Label8" runat="server" Text="Label">Logo del cliente:</asp:Label>
+                    <asp:FileUpload ID="fileupLogoCli" runat="server"  />
+              </div>
+
+              <div class="elementos form-group">
+                  <asp:Button ID="btnModificar" runat="server" Text="Modificar" />
+                  </div>
+
+              <div class="elementos form-group">
+                  <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
               </div>
 
             </div>

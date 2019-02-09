@@ -10,12 +10,15 @@ Public Class clientes_listado
 
     End Sub
 
+
+
     Private Sub grdviewClientes_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles grdviewClientes.RowDataBound
         'Ocultamos la primera columna del Grid (ID):
         e.Row.Cells(1).Visible = False
 
         'Ocultamos la última columna del Grid (path_logo)
         e.Row.Cells(9).Visible = False
+
     End Sub
     Private Sub grdviewClientes_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles grdviewClientes.RowEditing
         Dim idClienteEditar As String
@@ -29,12 +32,12 @@ Public Class clientes_listado
 
     Private Sub grdviewClientes_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles grdviewClientes.RowDeleting
         Dim idCliente As String
-        Dim nombreCliente As String
+        'Dim nombreCliente As String
 
         idCliente = grdviewClientes.Rows(e.RowIndex).Cells(1).Text
-        nombreCliente = grdviewClientes.Rows(e.RowIndex).Cells(2).Text
+        'nombreCliente = grdviewClientes.Rows(e.RowIndex).Cells(2).Text
 
-        If MsgBox("¿Estás seguro que desea eliminar al cliente " & nombreCliente & "?", MsgBoxStyle.OkCancel, "Eliminación de cliente") = MsgBoxResult.Ok Then
+        If MsgBox("¿Estás seguro que desea eliminar al cliente este registro?", MsgBoxStyle.OkCancel, "Eliminación de cliente") = MsgBoxResult.Ok Then
             'Se lanza la eliminación del usuario en la tabla de "privilegios_usuarios":
             Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
             Dim oConexion As New SqlConnection
@@ -74,7 +77,8 @@ Public Class clientes_listado
 
 
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
-        Response.Write("<script>window.open('cliente_alta.aspx','popup','width=550,height=600') </script>")
+        'Response.Write("<script>window.open('cliente_alta.aspx','popup','width=550,height=600') </script>")
+        Response.Redirect("cliente_alta.aspx")
     End Sub
 
 
@@ -102,11 +106,18 @@ Public Class clientes_listado
         grdviewClientes.DataBind()
 
         oConexion.Close()
+
+
+        'Pintamos la imagen del logo dentro de la celda del nombre comercial del cliente:
+        Dim i As Integer = 0
+        Dim path As String
+        While i < grdviewClientes.Rows.Count
+            path = grdviewClientes.Rows.Item(i).Cells.Item(9).Text
+            grdviewClientes.Rows.Item(i).Cells.Item(2).Text = "<img src=" & path & " border=""1"" width=""40"" height=""40"">" & grdviewClientes.Rows.Item(i).Cells.Item(2).Text
+            i = i + 1
+        End While
+
     End Sub
-
-
-
-
 
 
 #End Region

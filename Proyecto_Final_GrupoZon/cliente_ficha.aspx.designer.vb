@@ -32,6 +32,15 @@ Partial Public Class cliente_ficha
     Protected WithEvents txtCliente As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control imgLogo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents imgLogo As Global.System.Web.UI.WebControls.Image
+    
+    '''<summary>
     '''Control Label1.
     '''</summary>
     '''<remarks>
@@ -156,4 +165,40 @@ Partial Public Class cliente_ficha
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtSector As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control Label8.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label8 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control fileupLogoCli.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fileupLogoCli As Global.System.Web.UI.WebControls.FileUpload
+    
+    '''<summary>
+    '''Control btnModificar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control btnCancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
 End Class
