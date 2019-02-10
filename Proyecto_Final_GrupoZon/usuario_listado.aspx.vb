@@ -5,9 +5,29 @@ Public Class usuario_listado
 
     Private oDataTable As New DataTable
 
+    Private Sub usuario_listado_Init(sender As Object, e As EventArgs) Handles Me.Init
+        CargarDatos()
+    End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        CargarDatos()
+
+        If Session("acceso") = True Then
+            'Permito el acceso
+
+            If Session("gestion_usuarios") = True Then
+                'Permito el acceso
+            Else
+                'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
+
+                MsgBox("El usuario " & Session("usuario") & " no dispone de permisos para acceder a este apartado.", MsgBoxStyle.Information, "Acceso denegado.")
+
+                Response.Redirect("calendario.aspx")
+            End If
+
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
 
     End Sub
 
@@ -129,6 +149,8 @@ Public Class usuario_listado
         oConexion.Close()
 
     End Sub
+
+
 
 
 

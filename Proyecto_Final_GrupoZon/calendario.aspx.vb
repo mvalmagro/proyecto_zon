@@ -6,9 +6,18 @@ Public Class calendario
     Private fechas_Calendario1() As Date
     Private titulos_eventos_Calendario1() As String
 
+    Private Sub calendario_Init(sender As Object, e As EventArgs) Handles Me.Init
+        CargarTabla()
+    End Sub
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        CargarTabla()
+        If Session("acceso") = True Then
+            'Permito el acceso
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
 
     End Sub
 
@@ -116,5 +125,6 @@ Public Class calendario
     Protected Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         Response.Redirect("clientes_listado.aspx")
     End Sub
+
 
 End Class

@@ -12,6 +12,15 @@ Public Class cliente_alta
     Private sector As String
     Private path_logo As String
 
+    Private Sub cliente_alta_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Session("acceso") = True Then
+            'Permito el acceso
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
+    End Sub
+
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
 
         If CargarImagen() = True Then '-->Tenemos que controlar con este IF que no nos hayan adjuntado archivos que no sean imágenes.
@@ -62,6 +71,8 @@ Public Class cliente_alta
         oConexion.Close()
 
     End Sub
+
+
 
     Private Function CargarImagen() As Boolean
         'Este procedimiento se usa para subir archivos al servidor. 

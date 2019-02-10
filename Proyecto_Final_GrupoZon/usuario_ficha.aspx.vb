@@ -37,6 +37,25 @@ Public Class usuario_ficha
 
     End Sub
 
+    Private Sub usuario_ficha_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        If Session("acceso") = True Then
+            'Permito el acceso
+
+            If Session("gestion_usuarios") = True Then
+                'Permito el acceso
+            Else
+                'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
+                Response.Redirect("calendario.aspx")
+            End If
+
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
+
+    End Sub
+
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         Response.Redirect("usuario_listado.aspx")
     End Sub
@@ -568,6 +587,7 @@ Public Class usuario_ficha
         oDataSet = Nothing
 
     End Sub
+
 
     Private Function ContrasenaValida(l_password As String) As Boolean
         Dim digitos As Integer

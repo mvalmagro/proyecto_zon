@@ -5,9 +5,17 @@ Public Class clientes_listado
 
     Private oDataTable As New DataTable
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub clientes_listado_Init(sender As Object, e As EventArgs) Handles Me.Init
         CargarDatos()
+    End Sub
 
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Session("acceso") = True Then
+            'Permito el acceso
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
     End Sub
 
 
@@ -123,6 +131,8 @@ Public Class clientes_listado
         End While
 
     End Sub
+
+
 
 
 #End Region

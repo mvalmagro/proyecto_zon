@@ -7,6 +7,22 @@ Public Class usuario_alta
         CargarRoles()
     End Sub
 
+    Private Sub usuario_alta_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Session("acceso") = True Then
+            'Permito el acceso
+
+            If Session("gestion_usuarios") = True Then
+                'Permito el acceso
+            Else
+                'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
+                Response.Redirect("calendario.aspx")
+            End If
+
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
+    End Sub
 
     Private Sub bttAlta_Click(sender As Object, e As EventArgs) Handles bttAlta.Click
         Dim usuario As String

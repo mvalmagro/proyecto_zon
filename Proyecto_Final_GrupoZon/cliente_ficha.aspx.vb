@@ -29,6 +29,17 @@ Public Class cliente_ficha
 
     End Sub
 
+    Private Sub cliente_ficha_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If Session("acceso") = True Then
+            'Permito el acceso
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
+    End Sub
+
+
+
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
         If CargarImagen() = True Then '-->Tenemos que controlar con este IF que no nos hayan adjuntado archivos que no sean imágenes.
@@ -224,6 +235,8 @@ Public Class cliente_ficha
 
 
     End Sub
+
+
 
 #End Region
 
