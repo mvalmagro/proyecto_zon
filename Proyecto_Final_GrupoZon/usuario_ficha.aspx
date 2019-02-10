@@ -30,14 +30,18 @@
                     <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
                 </div>
 
+                <div class="form-group" style="margin-left:10px">
+                    <asp:CheckBox ID="chkPassword" runat="server" Text="¿Desea cambiar la contraseña?" AutoPostBack="True" />
+                </div>
+
                 <div class="elementos form-group">
                     <asp:Label ID="Label2" runat="server" Text="Label">Nueva password:</asp:Label>
-                    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
 
                 <div class="elementos form-group">
                      <asp:Label ID="Label3" runat="server" Text="Label">Confirmar nueva password:</asp:Label>
-                    <asp:TextBox ID="txtConfirmarPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmarPassword" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
 
                 <div class="elementos form-group">
@@ -52,11 +56,11 @@
 
                 <div class="elementos form-group">
                     <asp:Label ID="Label6" runat="server" Text="Label">Rol:</asp:Label>
-                    <asp:DropDownList ID="dropdownRol" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="dropdownRol" runat="server" AutoPostBack="True"></asp:DropDownList>
                 </div>
 
                 <div class="elementos form-group">
-                    <asp:Label ID="Label7" runat="server" Text="Label">Privilegios</asp:Label>
+                    <asp:Label ID="Label7" runat="server" Text="Label">Privilegios:</asp:Label>
                     <div>
                         <asp:ListBox ID="lstPrivilegiosActuales" runat="server" SelectionMode="Multiple"></asp:ListBox>
                         <asp:Button ID="btnArrowDerecha" runat="server" Text=">" />
@@ -68,12 +72,14 @@
                 </div>
 
 
+
             </div>
 
-            <div>
-                <asp:Button ID="btnModificar" runat="server" Text="Modificar" />
-            </div>
+          </div>
 
+          <div style="margin-top:50px">
+               <asp:Button ID="btnModificar" runat="server" Text="Modificar datos" />
+              <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
           </div>
         
     </form>

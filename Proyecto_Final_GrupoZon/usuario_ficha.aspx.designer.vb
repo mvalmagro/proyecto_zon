@@ -50,6 +50,15 @@ Partial Public Class usuario_ficha
     Protected WithEvents txtUsuario As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Control chkPassword.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkPassword As Global.System.Web.UI.WebControls.CheckBox
+    
+    '''<summary>
     '''Control Label2.
     '''</summary>
     '''<remarks>
@@ -210,4 +219,13 @@ Partial Public Class usuario_ficha
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnModificar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control btnCancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
 End Class
