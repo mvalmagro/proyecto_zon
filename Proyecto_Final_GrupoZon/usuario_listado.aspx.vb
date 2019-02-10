@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data.OleDb
+Imports System.Data.SqlClient
 
 Public Class usuario_listado
     Inherits System.Web.UI.Page
@@ -7,6 +8,7 @@ Public Class usuario_listado
 
     Private Sub usuario_listado_Init(sender As Object, e As EventArgs) Handles Me.Init
         CargarDatos()
+        RellenarDropDownCriterios()
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -151,7 +153,46 @@ Public Class usuario_listado
     End Sub
 
 
+    Public Sub RellenarDropDownCriterios()
+        Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
+        Dim oConexion As New SqlConnection
+        Dim oDataAdapter As SqlDataAdapter
+        Dim oDataSet As New DataSet
+        Dim i As Integer
 
+        oConexion = New SqlConnection(cadenaConexion)
+
+        oConexion.Open()
+
+        oDataAdapter = New SqlDataAdapter("SELECT TOP 1 usuarios.nombre AS Nombre, nombre_real AS 'Nombre y apellidos', email AS 'Correo eletronico', roles.nombre AS 'Rol' FROM usuarios, roles WHERE usuarios.id_rol=roles.id", oConexion)
+        oDataAdapter.Fill(oDataSet, "usuarios")
+
+
+        For Each oDataColum As DataColumn In oDataSet.Tables("usuarios").Columns
+            dropDownCriterios.Items.Add(New ListItem(oDataColum.ColumnName))
+        Next
+
+        i = 0
+        While i < dropDownCriterios.Items.Count
+            Select Case dropDownCriterios.Items(i).Text
+                Case "Nombre"
+                    dropDownCriterios.Items(i).Text = "Nombre"
+                    dropDownCriterios.Items(i).Value = "nombre"
+                Case "Nombre y apellidos"
+                    dropDownCriterios.Items(i).Text = "Nombre y apellidos"
+                    dropDownCriterios.Items(i).Value = "nombre_real"
+                Case "Correo eletronico"
+                    dropDownCriterios.Items(i).Text = "Correo eletronico"
+                    dropDownCriterios.Items(i).Value = "email"
+                Case "Rol"
+                    dropDownCriterios.Items(i).Text = "Rol"
+                    dropDownCriterios.Items(i).Value = "nombre_rol"
+            End Select
+
+            i = i + 1
+        End While
+
+    End Sub
 
 
 #End Region
