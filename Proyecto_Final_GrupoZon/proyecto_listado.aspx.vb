@@ -39,4 +39,29 @@ Public Class proyecto_listado
     Private Sub btnAlta_Click(sender As Object, e As EventArgs) Handles btnAlta.Click
         Response.Write("<script>window.open('proyecto_alta.aspx','popup','width=550,height=600') </script>")
     End Sub
+
+    Private Sub gridProyecto_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles gridProyecto.RowDeleting
+        Dim nombreProyecto As String
+
+        nombreProyecto = gridProyecto.Rows(e.RowIndex).Cells(2).Text
+        If MsgBox("¿Estás seguro que desea eliminar al usuario " & nombreProyecto & "?", MsgBoxStyle.OkCancel, "Eliminación de usuario") = MsgBoxResult.Ok Then
+
+            Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
+            Dim oConexion As New SqlConnection
+            Dim myCmd As SqlCommand
+
+            oConexion = New SqlConnection(cadenaConexion)
+
+            oConexion.Open()
+
+            myCmd = New SqlCommand("DELETE FROM proyectos WHERE titulo=" & nombreProyecto, oConexion)
+            myCmd.ExecuteNonQuery()
+            myCmd = Nothing
+
+            oConexion.Close()
+
+            Response.Redirect("proyecto_listado.aspx") '-->Recargamos la página
+
+        End If
+    End Sub
 End Class
