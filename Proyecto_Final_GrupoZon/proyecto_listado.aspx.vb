@@ -6,7 +6,7 @@ Public Class proyecto_listado
     Private oDataTable As New DataTable
 
     Private Sub gridProyecto_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles gridProyecto.RowDataBound
-        e.Row.Cells(1).Visible = False
+        e.Row.Cells(1).Visible = True
         e.Row.Cells(5).Visible = False
     End Sub
 
@@ -54,7 +54,7 @@ Public Class proyecto_listado
 
             oConexion.Open()
 
-            myCmd = New SqlCommand("DELETE FROM proyectos WHERE titulo=" & nombreProyecto, oConexion)
+            myCmd = New SqlCommand("DELETE FROM proyectos WHERE titulo=" & "'" & nombreProyecto & "'", oConexion)
             myCmd.ExecuteNonQuery()
             myCmd = Nothing
 
@@ -63,5 +63,15 @@ Public Class proyecto_listado
             Response.Redirect("proyecto_listado.aspx") '-->Recargamos la página
 
         End If
+    End Sub
+
+    Private Sub gridProyecto_RowEditing(sender As Object, e As GridViewEditEventArgs) Handles gridProyecto.RowEditing
+        Dim idTituloEditar As String
+
+        'Capturamos el ID del usuario que queremos editar y del cual vamos a mostrar los datos en su "ficha de usuario":
+        idTituloEditar = gridProyecto.Rows(e.NewEditIndex).Cells(1).Text
+
+        'Abrimos la URL correspondiente pasándole un parámetro:
+        Response.Redirect("proyecto_ficha.aspx?Valor=" & idTituloEditar)
     End Sub
 End Class

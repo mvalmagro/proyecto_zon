@@ -26,7 +26,7 @@ Public Class usuario_listado
         idUsuarioEditar = grdviewUsuarios.Rows(e.NewEditIndex).Cells(1).Text
 
         'Abrimos la URL correspondiente pasándole un parámetro:
-        Response.Redirect("ficha_usuario.aspx?Valor=" & idUsuarioEditar)
+        Response.Redirect("usuario_ficha.aspx?Valor=" & idUsuarioEditar)
 
     End Sub
 
