@@ -33,6 +33,8 @@
                <div class="elementos form-group">
                 <label for="">Titulo</label>
                 <input type="text" name="" value="" class="form-control">
+                   
+                   <asp:TextBox ID="TextBox1" runat="server" TextMode="DateTimeLocal"></asp:TextBox>
                </div>
 
               <div class="elementos form-group">

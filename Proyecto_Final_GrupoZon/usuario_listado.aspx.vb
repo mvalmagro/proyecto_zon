@@ -4,34 +4,82 @@ Imports System.Data.SqlClient
 Public Class usuario_listado
     Inherits System.Web.UI.Page
 
+    Private query As String
+    Private nFiltros As Integer = 0
+    'Private criterios() As String
+    'Private filtros As String
+
     Private oDataTable As New DataTable
 
     Private Sub usuario_listado_Init(sender As Object, e As EventArgs) Handles Me.Init
-        CargarDatos()
-        RellenarDropDownCriterios()
+
+        query = Request.QueryString("parametro")
+        nFiltros = Request.QueryString("numfiltros")
+
+        If query Is Nothing Then
+            CargarDatos()
+            RellenarDropDownCriterios()
+        Else
+            CargarDatos(query)
+            RellenarDropDownCriterios()
+
+            If nFiltros = 1 Then
+                lblFiltros.Text = "Hay " & nFiltros & " filtro aplicado."
+            Else
+                lblFiltros.Text = "Hay " & nFiltros & " filtros aplicados."
+            End If
+
+
+            btnEliminarFiltros.Visible = True
+        End If
+
+        'Pintamos la query de los FILTROS en una label oculta:
+        lblQuery.Text = query
+
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        ControlDeAcceso()
+    End Sub
 
-        If Session("acceso") = True Then
-            'Permito el acceso
+    Private Sub btnEliminarFiltros_Click(sender As Object, e As EventArgs) Handles btnEliminarFiltros.Click
+        Response.Redirect("usuario_listado.aspx")
+        btnEliminarFiltros.Visible = False
+        lblFiltros.Text = "No hay filtros establecidos."
+    End Sub
 
-            If Session("gestion_usuarios") = True Then
-                'Permito el acceso
-            Else
-                'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
+    Private Sub btnFiltrar_Click(sender As Object, e As EventArgs) Handles btnFiltrar.Click
+        Dim l_criterio As String
+        Dim l_filtro As String
+        Dim nuevoFiltro As String
 
-                MsgBox("El usuario " & Session("usuario") & " no dispone de permisos para acceder a este apartado.", MsgBoxStyle.Information, "Acceso denegado.")
+        l_criterio = dropDownCriterios.SelectedValue
+        l_filtro = txtFiltro.Text
 
-                Response.Redirect("calendario.aspx")
-            End If
-
+        If l_criterio.Equals("nombre_rol") = True Then
+            l_criterio = "r.nombre"
         Else
-            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
-            Response.Redirect("Default.aspx")
+            l_criterio = "u." & l_criterio
         End If
 
+        nuevoFiltro = "(" & l_criterio & "=" & "'" & l_filtro & "')"
+
+
+        'Montamos la query:
+        If query Is Nothing Then
+            query = "SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE (u.id_rol=r.id)" & " and (" & nuevoFiltro & ")"
+        Else
+            query = query.Substring(0, query.Length - 1)
+
+            query = query & " and " & nuevoFiltro & ")"
+        End If
+
+        nFiltros = nFiltros + 1
+
+        Response.Redirect("usuario_listado.aspx?parametro=" & query & "&numfiltros=" & nFiltros)
+
     End Sub
+
 
     Private Sub grdviewUsuarios_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles grdviewUsuarios.RowDataBound
         'Ocultamos la primera columna del Grid (ID):
@@ -127,7 +175,7 @@ Public Class usuario_listado
 
     End Function
 
-    Private Sub CargarDatos()
+    Private Sub CargarDatos(Optional querySelect As String = "SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE u.id_rol=r.id")
 
         'Realizamos la conexión a la BBDD:
         Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
@@ -135,11 +183,12 @@ Public Class usuario_listado
         Dim myCmd As SqlCommand
         Dim oSqlDataReader As SqlDataReader
 
+
         oConexion = New SqlConnection(cadenaConexion)
 
         oConexion.Open()
 
-        myCmd = New SqlCommand("SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE u.id_rol=r.id", oConexion)
+        myCmd = New SqlCommand(querySelect, oConexion)
 
         oSqlDataReader = myCmd.ExecuteReader
         oDataTable.Load(oSqlDataReader)
@@ -193,6 +242,30 @@ Public Class usuario_listado
         End While
 
     End Sub
+
+    Private Sub ControlDeAcceso()
+        If Session("acceso") = True Then
+            'Permito el acceso
+
+            If Session("gestion_usuarios") = True Then
+                'Permito el acceso
+            Else
+                'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
+
+                MsgBox("El usuario " & Session("usuario") & " no dispone de permisos para acceder a este apartado.", MsgBoxStyle.Information, "Acceso denegado.")
+
+                Response.Redirect("calendario.aspx")
+            End If
+
+        Else
+            'Si no tienes acceso a la aplicación, te reedirijo a la página del login:
+            Response.Redirect("Default.aspx")
+        End If
+    End Sub
+
+
+
+
 
 
 #End Region

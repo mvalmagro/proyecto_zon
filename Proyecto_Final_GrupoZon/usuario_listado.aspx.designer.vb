@@ -86,6 +86,15 @@ Partial Public Class usuario_listado
     Protected WithEvents lblFiltros As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control btnEliminarFiltros.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnEliminarFiltros As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''Control grdviewUsuarios.
     '''</summary>
     '''<remarks>
@@ -102,4 +111,13 @@ Partial Public Class usuario_listado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnAlta As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control lblQuery.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblQuery As Global.System.Web.UI.WebControls.Label
 End Class

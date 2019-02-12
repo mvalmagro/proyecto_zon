@@ -28,6 +28,7 @@
             <div>
                 <asp:Label ID="Label1" runat="server" Text="Filtros:"></asp:Label>
                 <asp:Label ID="lblFiltros" runat="server" Text="No hay filtros establecidos."></asp:Label>
+                <asp:Button ID="btnEliminarFiltros" runat="server" Font-Size="Smaller" Text="X" Visible="False" />
             </div>
             
 
@@ -43,6 +44,8 @@
             </div>
             
         </div>
+        
+        <asp:Label ID="lblQuery" runat="server" Text="Label"></asp:Label>
         
     </form>
 </body>

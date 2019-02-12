@@ -44,6 +44,7 @@ Public Class usuario_ficha
 
             If Session("gestion_usuarios") = True Then
                 'Permito el acceso
+
             Else
                 'Si no tienes privilegios para la "Gestión de Usuarios", no te permito el acceso:
                 Response.Redirect("calendario.aspx")
@@ -180,6 +181,7 @@ Public Class usuario_ficha
             lstPrivilegiosActuales.Enabled = False
             lstPrivilegiosRestantes.Enabled = False
             dropdownRol.Enabled = False
+
             btnArrowCompletoDerecha.Enabled = False
             btnArrowCompletoIzquierda.Enabled = False
             btnArrowDerecha.Enabled = False
@@ -195,10 +197,18 @@ Public Class usuario_ficha
             lstPrivilegiosActuales.Enabled = True
             lstPrivilegiosRestantes.Enabled = True
             dropdownRol.Enabled = True
-            btnArrowCompletoDerecha.Enabled = True
-            btnArrowCompletoIzquierda.Enabled = True
-            btnArrowDerecha.Enabled = True
-            btnArrowIzquierda.Enabled = True
+
+            If dropdownRol.SelectedItem.Text <> "Personalizado" Then
+                btnArrowCompletoDerecha.Enabled = False
+                btnArrowCompletoIzquierda.Enabled = False
+                btnArrowDerecha.Enabled = False
+                btnArrowIzquierda.Enabled = False
+            Else
+                btnArrowCompletoDerecha.Enabled = True
+                btnArrowCompletoIzquierda.Enabled = True
+                btnArrowDerecha.Enabled = True
+                btnArrowIzquierda.Enabled = True
+            End If
 
             btnModificar.Text = "Modificar datos"
         End If
