@@ -136,6 +136,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\estilos_proyecto_listado.css" />
     <Content Include="Content\estilos_proyecto.css" />
     <Content Include="img\logo pez fondo claro.png" />
     <Content Include="img\logo pez fondo oscuro.png" />
