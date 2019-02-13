@@ -6,8 +6,8 @@ Public Class usuario_listado
 
     Private query As String
     Private nFiltros As Integer = 0
-    'Private criterios() As String
-    'Private filtros As String
+    Private filtrosDetalle As String
+
 
     Private oDataTable As New DataTable
 
@@ -15,6 +15,7 @@ Public Class usuario_listado
 
         query = Request.QueryString("parametro")
         nFiltros = Request.QueryString("numfiltros")
+        filtrosDetalle = Request.QueryString("filtrosDetalle")
 
         If query Is Nothing Then
             CargarDatos()
@@ -29,12 +30,17 @@ Public Class usuario_listado
                 lblFiltros.Text = "Hay " & nFiltros & " filtros aplicados."
             End If
 
-
             btnEliminarFiltros.Visible = True
         End If
 
         'Pintamos la query de los FILTROS en una label oculta:
         lblQuery.Text = query
+
+        'Pintamos los filtros desglosados en una label oculta:
+        lblFiltrosDetalle.Text = filtrosDetalle
+
+        PintarFiltrosDetalle()
+
 
     End Sub
 
@@ -52,9 +58,12 @@ Public Class usuario_listado
         Dim l_criterio As String
         Dim l_filtro As String
         Dim nuevoFiltro As String
+        Dim operadorLogico As String
+        Dim filtDetalle As String
 
         l_criterio = dropDownCriterios.SelectedValue
         l_filtro = txtFiltro.Text
+
 
         If l_criterio.Equals("nombre_rol") = True Then
             l_criterio = "r.nombre"
@@ -62,21 +71,37 @@ Public Class usuario_listado
             l_criterio = "u." & l_criterio
         End If
 
+
+        'Vamos a hacer la comprobación para saber si hay que insertar un "and" o un "or":
+        If query Is Nothing Then
+
+            operadorLogico = "and"
+        Else
+            If query.Contains(l_criterio & "=") = True Then
+                operadorLogico = "or"
+            Else
+                operadorLogico = "and"
+            End If
+        End If
+        '=================================================================================
+
+
         nuevoFiltro = "(" & l_criterio & "=" & "'" & l_filtro & "')"
 
+        filtDetalle = lblFiltrosDetalle.Text & nuevoFiltro & ";"
 
         'Montamos la query:
         If query Is Nothing Then
-            query = "SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE (u.id_rol=r.id)" & " and (" & nuevoFiltro & ")"
+            query = "SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE (u.id_rol=r.id)" & " " & operadorLogico & " " & "(" & nuevoFiltro & ")"
         Else
             query = query.Substring(0, query.Length - 1)
 
-            query = query & " and " & nuevoFiltro & ")"
+            query = query & " " & operadorLogico & " " & nuevoFiltro & ")"
         End If
 
         nFiltros = nFiltros + 1
 
-        Response.Redirect("usuario_listado.aspx?parametro=" & query & "&numfiltros=" & nFiltros)
+        Response.Redirect("usuario_listado.aspx?parametro=" & query & "&numfiltros=" & nFiltros & "&filtrosDetalle=" & filtDetalle)
 
     End Sub
 
@@ -175,7 +200,7 @@ Public Class usuario_listado
 
     End Function
 
-    Private Sub CargarDatos(Optional querySelect As String = "SELECT u.id, u.nombre AS 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE u.id_rol=r.id")
+    Private Sub CargarDatos(Optional querySelect As String = "Select u.id, u.nombre As 'Usuario', u.nombre_real AS 'Nombre', u.email AS 'Correo electronico', r.nombre AS 'Rol', ultimo_logon FROM usuarios u, roles r WHERE u.id_rol=r.id")
 
         'Realizamos la conexión a la BBDD:
         Dim cadenaConexion As String = "Server=pmssql100.dns-servicio.com;Database=6438944_zon;User Id=jrcmvaa;Password=Ssaleoo9102;"
@@ -225,7 +250,7 @@ Public Class usuario_listado
         While i < dropDownCriterios.Items.Count
             Select Case dropDownCriterios.Items(i).Text
                 Case "Nombre"
-                    dropDownCriterios.Items(i).Text = "Nombre"
+                    dropDownCriterios.Items(i).Text = "Usuario"
                     dropDownCriterios.Items(i).Value = "nombre"
                 Case "Nombre y apellidos"
                     dropDownCriterios.Items(i).Text = "Nombre y apellidos"
@@ -264,7 +289,65 @@ Public Class usuario_listado
     End Sub
 
 
+    Private Sub PintarFiltrosDetalle()
+        Dim cadena As String
+        Dim aux As String
+        Dim aux2() As String
+        Dim aux3() As String
+        Dim i As Integer = 0
 
+        Dim criterio As String
+        Dim valor As String
+        Dim filtroTratado As String
+
+        cadena = lblFiltros.Text.Substring(0, lblFiltros.Text.Count - 1)
+        aux = filtrosDetalle
+
+        If aux <> Nothing Then
+
+            aux2 = aux.Split(";")
+
+            While i < aux2.Count - 1
+
+                aux3 = aux2(i).Split("=")
+
+                criterio = aux3(aux3.Count - 2)
+                valor = aux3(aux3.Count - 1)
+
+                criterio = criterio.Substring(1, criterio.Length - 1)
+                valor = valor.Substring(1, valor.Length - 3)
+
+                'Tratamos el criterio
+                Select Case criterio
+                    Case "u.nombre"
+                        criterio = "Usuario"
+                    Case "u.nombre_real"
+                        criterio = "Nombre y apellidos"
+                    Case "u.email"
+                        criterio = "Correo electronico"
+                    Case "r.nombre"
+                        criterio = "Rol"
+                End Select
+
+                filtroTratado = criterio & ": " & valor
+
+
+                If nFiltros = 1 Or i = 0 Then
+                    cadena = cadena & "(" & filtroTratado & ")"
+                Else
+                    cadena = cadena.Substring(0, cadena.Count - 1) & " , " & filtroTratado & ")"
+                End If
+
+
+                filtroTratado = Nothing
+                i = i + 1
+            End While
+
+            lblFiltros.Text = cadena
+
+        End If
+
+    End Sub
 
 
 

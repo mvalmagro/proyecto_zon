@@ -45,7 +45,9 @@
             
         </div>
         
-        <asp:Label ID="lblQuery" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="lblQuery" runat="server" Visible="False"></asp:Label>
+        <br />
+        <asp:Label ID="lblFiltrosDetalle" runat="server" Visible="False"></asp:Label>
         
     </form>
 </body>

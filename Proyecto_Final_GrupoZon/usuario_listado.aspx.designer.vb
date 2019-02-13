@@ -120,4 +120,13 @@ Partial Public Class usuario_listado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblQuery As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblFiltrosDetalle.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblFiltrosDetalle As Global.System.Web.UI.WebControls.Label
 End Class
