@@ -4,18 +4,37 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="Content/nav.css" rel="stylesheet" />  
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-        
     <link href="Content/esitlos_ventana_proyectos.css" rel="stylesheet" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Calendario</title>
 </head>
 
 
 <body>
-    <form id="form1" runat="server" class="form-container">
-        <img src="img/logo pez fondo claro.png" alt="Alternate Text" class="logo"/>
+    <form id="form1" runat="server">
+
+     <header>
+            <nav>
+               <div class="menu-icon">
+                  <i class="fa fa-bars fa-2x"></i>
+               </div>
+               <div class="logo">
+                  <img src="img/logo%20pez%20fondo%20oscuro.png" class="pez" />
+               </div>
+               <div class="menu">
+                  <ul>
+                     <li><a href="calendario.aspx">Calendario</a></li>
+                     <li><a href="proyecto_listado.aspx">Gestion Proyectos</a></li>
+                     <li><a href="usuario_listado.aspx">Gestion Usuarios</a></li>
+                  </ul>
+               </div>
+            </nav>
+    </header>
+
+
 	    <div class="padre">
 
 
@@ -58,11 +77,5 @@
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
        
-
-
-
-
 </body>
-
-
 </html>

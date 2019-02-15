@@ -69,9 +69,13 @@ Public Class proyecto_listado
         Dim idTituloEditar As String
 
         'Capturamos el ID del usuario que queremos editar y del cual vamos a mostrar los datos en su "ficha de usuario":
-        idTituloEditar = gridProyecto.Rows(e.NewEditIndex).Cells(1).Text
+        idTituloEditar = gridProyecto.Rows(e.NewEditIndex).Cells(2).Text
 
         'Abrimos la URL correspondiente pasándole un parámetro:
         Response.Redirect("proyecto_ficha.aspx?Valor=" & idTituloEditar)
     End Sub
+
+
+
+
 End Class

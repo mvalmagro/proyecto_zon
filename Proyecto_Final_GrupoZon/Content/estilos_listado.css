@@ -1,0 +1,28 @@
+.padre {
+    height: 100vh;
+    width: 100%;
+    /*background: blue;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hijo {
+    height: 100vh;
+    width: 100%;
+    /*background: red;*/
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid {
+    width: 1200px;
+    /*background: yellow;*/
+    margin: 5px;
+}
+
+
+

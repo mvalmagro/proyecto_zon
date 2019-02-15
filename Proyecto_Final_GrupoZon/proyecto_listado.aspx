@@ -5,8 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="Content/estilos_proyecto_listado.css" rel="stylesheet" />
+    <link href="Content/estilos_listado.css" rel="stylesheet" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/nav.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet" />
 
     <title></title>
@@ -26,8 +27,8 @@
                <div class="menu">
                   <ul>
                      <li><a href="calendario.aspx">Calendario</a></li>
-                     <li><a href="#">Gestion Proyectos</a></li>
-                     <li><a href="#">Gestion Usuarios</a></li>
+                     <li><a href="proyecto_listado.aspx">Gestion Proyectos</a></li>
+                     <li><a href="usuario_listado.aspx">Gestion Usuarios</a></li>
                   </ul>
                </div>
             </nav>
@@ -46,8 +47,8 @@
                         <Columns>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="myModal">
-                                      Launch demo modal
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="myModal">
+                                      PDF
                                     </button>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -58,7 +59,7 @@
                 </div>
 
                 <div class="grid">
-                    <asp:Button ID="btnAlta" runat="server" Text="Button" CssClass="btn btn-dark" />
+                    <asp:Button ID="btnAlta" runat="server" Text="Alta de proyecto" CssClass="btn btn-dark" />
                 </div>                                 
 
                 
@@ -67,7 +68,8 @@
             
         </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -77,7 +79,11 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+
+            <asp:FileUpload id="FileUploadControl" runat="server" />
+            <asp:Button runat="server" id="subirFichero" text="Upload"/>
+            <asp:Label runat="server" id="StatusLabel" text="Upload status: " />
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -92,13 +98,14 @@
 
         
 </body>
-    <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
 
     <script>
-        $('#myModal').on('shown.bs.modal', function () {
-      $('#modal').trigger('focus')
-    })
+        $('#exampleModal').on('shown.bs.modal', function () {
+          $('#myInput').trigger('focus')
+        })
     </script>
 
     <script>
