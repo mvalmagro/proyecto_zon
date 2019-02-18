@@ -1,0 +1,5 @@
+Para marzo
+
+Simular el envio via socket
+
+Se mandan bloques del ficheros y estos trozos los monta el receptor

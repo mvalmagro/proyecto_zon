@@ -1,0 +1,7 @@
+nivel basico 6 o mas
+
+nivel medio 5 o 4
+
+nivel avanzado menos de 4
+
+
